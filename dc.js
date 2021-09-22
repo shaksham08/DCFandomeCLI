@@ -29,31 +29,53 @@ function askQuestion(options, question, answer) {
 
 var questions = [
   (questionOne = {
-    question: "Where do i live?",
-    options: ["patna", "gaya", "mumbai"],
-    answer: 1,
+    question: "Where does Barry Allen keep his 'Flash' costume?",
+    options: [
+      "Inside a ring",
+      "In a small backpack",
+      "Inside a shoe",
+      "Under his usual clothes",
+    ],
+    answer: 0,
   }),
   (questionTwo = {
-    question: "Which is my favourate movie?",
-    options: ["race", "bang bang", "inception"],
+    question:
+      "Which of the following Supervillain was not a member of 'Suicide Squad'?",
+    options: ["Nightshade", "Deadshot", "The Joker", "Slipknot"],
     answer: 2,
   }),
   (questionThree = {
-    question: "Which is my favourate dish?",
-    options: ["fish", "paneer", "momo"],
+    question:
+      "What weapon besides his mind, does Lex Luthor traditionally wield?",
+    options: [
+      "Sword of Kryptonite",
+      "Gamma Ray laser",
+      "Warsuit",
+      "Singing voice",
+    ],
     answer: "2",
   }),
-  (questionTfour = {
-    question: "Which is my favourate car?",
-    options: ["maruti", "hundai", "toyota", "bmw"],
-    answer: 3,
+  (questionfour = {
+    question: "The 'DC' in DC Comics stands for:",
+    options: [
+      "Dangerous Comics",
+      "Detective Comics",
+      "Demonic Comics",
+      "Devilish Comics",
+    ],
+    answer: 1,
+  }),
+  (questionFive = {
+    question: "Who is superman?",
+    options: ["Superhero", "super villain"],
+    answer: 0,
   }),
 ];
 
 function start() {
   console.log("Welcome to the Game");
   var name = readlineSync.question("Enter your name : ");
-  console.log(`Let see ${name} how much you know me???`);
+  console.log(`Let see ${name} how much you know DC comics???`);
 }
 
 function play(start, end) {
@@ -68,9 +90,7 @@ function play(start, end) {
 
 function printHighestScore() {
   console.log("Your final score is : " + count);
-  console.log(
-    "Lets see who are all the top scorers and if you have beaten them"
-  );
+  console.log("Lets see who are all the top scorers");
   let highest = false;
   for (let i = 0; i < highestScore.length; i++) {
     if (highestScore[i].score < count) {
